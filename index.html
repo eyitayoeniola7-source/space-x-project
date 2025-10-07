@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpaceX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-black text-white font-roboto">
+    <div class="fixed top-4 left-4 z-50 bg-black bg-opacity-75 p-1 rounded">
+      <svg
+        _ngcontent-fea-c29=""
+        xmlns="http://www.w3.org/2000/svg"
+        width="147"
+        height="19"
+        viewBox="0 0 147 19"
+        fill="none"
+      >
+        <g _ngcontent-fea-c29="">
+          <path
+            _ngcontent-fea-c29=""
+            d="M33.4556 7.10059C35.9425 7.10059 37.5024 8.14389 37.5024 9.99707V11.2383C37.5024 13.2081 36.1594 14.0693 33.6704 14.0693H24.7524V18.4062H21.3345V7.10059H33.4556ZM146.805 0.544922V0.561523C141.398 1.00137 120.15 3.63015 105.414 18.4062H99.9458L100.557 17.7988C103.641 14.8268 117.282 2.23051 146.803 0.542969L146.805 0.544922ZM56.2397 18.4043H52.1655L50.3599 15.9287H39.8169L41.6274 14H48.9526L45.4292 9.17285L47.5093 6.62012L56.2397 18.4043ZM72.1841 7.09863C74.0086 7.09865 75.3021 7.72865 75.6343 9.07031H62.8081V16.2803H75.6343C75.2694 17.7734 74.4885 18.4042 72.2827 18.4043H62.5786C60.9037 18.4043 59.3268 17.7248 59.3267 15.9209V9.58203C59.3267 7.778 60.9037 7.09868 62.5786 7.09863H72.1841ZM90.7222 12.834H83.8247V16.2803H95.6489V18.4043H80.3481V10.8975H90.7222V12.834ZM120.998 18.4043H115.584L110.775 14.9082H110.777C111.663 14.2168 112.602 13.5232 113.51 12.9014L120.998 18.4043ZM12.9351 7.09863C14.8252 7.09865 15.9037 8.0272 16.2358 9.07031H3.59424V11.5049H13.3979V11.5029C15.3722 11.6154 16.5677 12.4597 16.5679 14.0488V15.8535C16.5677 17.6083 15.5242 18.4014 13.4331 18.4014H3.43018C1.52352 18.4014 0.428522 17.6897 0.112793 16.2783H13.4849V13.6934H3.54541C1.70432 13.7036 0.459473 12.8582 0.459473 11.3691V9.58203C0.459473 7.87612 1.66924 7.09863 3.77686 7.09863H12.9351ZM24.7524 12H33.0435C34.3863 12 34.5356 11.5512 34.5356 10.7412V10.2979C34.5356 9.50218 34.3371 9.07228 32.8774 9.07227H24.7729L24.7524 12ZM109.604 9.87891C108.627 10.4554 107.562 11.1202 106.646 11.7334L100.298 7.09863H105.705L109.604 9.87891ZM109.607 9.88086L109.604 9.87891L109.607 9.87793V9.88086ZM95.811 9.07031H80.3481V7.09863H95.811V9.07031Z"
+            fill="#F0F0FA"
+          ></path>
+        </g>
+      </svg>
+    </div>
+
+    <nav
+      class="w-full flex items-center bg-black text-white px-8 py-4"
+      style="padding-left: 180px"
+    >
+      <ul class="flex items-center gap-10">
+        <!--Dropdown:Vehicle-->
+        <li class="relative group">
+          <a
+            href="#vehicles"
+            class="group-hover:underline transition text-sm font-semibold"
+            >VEHICLES</a
+          >
+          <div
+            class="absolute left-0 mt-1 hidden group-hover:flex flex-col p-1 space-y-1 z-10 text-sm -translate-y-1"
+          >
+            <a href="#starship" class="hover:opacity-75 transition">STARSHIP</a>
+            <a href="#dragon" class="hover:opacity-75">DRAGON</a>
+            <a href="#falcon9" class="hover:opacity-75">FALCON 9</a>
+            <a href="#falconheavy" class="hover:opacity-75">FALCON HEAVY</a>
+          </div>
+        </li>
+        <li><a href="#launches" class="font-semibold text-sm">LAUNCHES</a></li>
+        <li>
+          <a href="#human-spaceflight" class="font-semibold text-sm"
+            >HUMAN SPACEFLIGHT</a
+          >
+        </li>
+        <li>
+          <a href="#rideshare" class="font-semibold text-sm">RIDESHARE</a>
+        </li>
+        <li><a href="#starlink" class="font-semibold text-sm">STARLINK</a></li>
+        <li>
+          <a href="#starshield" class="font-semibol text-sm">STARSHIELD</a>
+        </li>
+
+        <!--Dropdown:Company-->
+        <li class="relative group">
+          <a
+            href="#company"
+            class="group-hover:underline transition text-sm font-semibold"
+            >COMPANY</a
+          >
+          <div
+            class="absolute left-0 mt-1 hidden group-hover:flex flex-col p-1 space-y-1 z-10 text-xs -translate-y-1"
+          >
+            <a href="#mission" class="hover:opacity-75">MISSION</a>
+            <a href="#careers" class="hover:opacity-75">CAREERS</a>
+            <a href="#updates" class="hover:opacity-75">UPDATES</a>
+          </div>
+        </li>
+        <li><a href="#shop" class="font-semibold text-sm">SHOP</a></li>
+      </ul>
+
+      <div class="flex-grow"></div>
+
+      <ul class="flex items-center">
+        <li class="relative group">
+          <a
+            href="#"
+            class="px-3 py-1 border border-white rounded-sm text-sm hover:underline"
+          >
+            UPCOMING LAUNCHES
+          </a>
+          <div
+            class="absolute left-0 mt-1 hidden group-hover:flex flex-col p-2 space-y-2 z-10 text-sm min-w-max"
+          >
+            <div>
+              <h3 class="font-medium">Starlink Mission</h3>
+              <p id="starlink-countdown">T-13:43:55</p>
+            </div>
+            <div>
+              <h3 class="font-medium">KF-03 Mission</h3>
+              <p>Oct 10, 2025<br />02:24 - 04:58 Nigeria Time</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <section
+      class="hero flex items-center justify-center md:justify-start min-h-screen px-6 md:px-12 bg-black text-white"
+    >
+      <div class="space-y-6 max-w-md">
+        <div id="countdown" class="text-base font-mono">T-7D 08:37:54</div>
+        <h1 class="text-4xl font-bold leading-tight">
+          STARSHIP'S ELEVENTH <br />
+          FLIGHT TEST
+        </h1>
+
+        <a
+          href="#watch"
+          class="inline-block px-6 py-2 border rounded-md border-white bg-black text-white hover:bg-white hover:text-black transition-colors duration-300"
+        >
+          WATCH <span class="ml-2">→</span>
+        </a>
+      </div>
+    </section>
+    <div
+      style="position: relative; width: 100%; height: 100vh; overflow: hidden"
+    >
+      <video
+        aria-describedby="video-description"
+        aria-labelledby="video-description"
+        aria-hidden="true"
+        autoplay="true"
+        loop="true"
+        muted="true"
+        playsinline="true"
+        preload="auto"
+        poster="https://sxcontent9668.azureedge.us/cms-assets/assets/Mars_Mobile_9924bba7c2.jpg"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        "
+      >
+        <source
+          type="video/mp4"
+          src="https://sxcontent9668.azureedge.us/cms-assets/assets/Mobile_v4_HB_e1d2eda88f.mp4"
+        />
+        <p id="video-description"></p>
+      </video>
+
+      <div
+        style="
+          position: absolute;
+          top: 50%;
+          left: 10%;
+          transform: translateY(-50%);
+          color: white;
+          z-index: 10;
+          max-width: 700px;
+        "
+      >
+        <h1
+          style="
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            font-family: 'Arial Black', 'Helvetica', sans-serif;
+            line-height: 1.2;
+          "
+        >
+          MAKING LIFE<br />MULTIPLANETARY
+        </h1>
+        <p
+          style="
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+            font-family: 'Helvetica', 'Arial', sans-serif;
+          "
+        >
+          SpaceX was founded under the belief that a future where humanity is
+          out exploring the stars is fundamentally more exciting than one where
+          we are not.
+        </p>
+        <a
+          href="#explore"
+          style="
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.6rem;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+            font-family: 'Helvetica', 'Arial', sans-serif;
+          "
+          onmouseover="this.style.backgroundColor='white'; this.style.color='black';"
+          onmouseout="this.style.backgroundColor='rgba(0,0,0,0.5)'; this.style.color='white';"
+        >
+          EXPLORE <span style="margin-left: 8px">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div
+      style="
+        position: relative;
+        background-image: url('images/Revolutionizing_Space_Tech_Desktop_ec67ad03c2.jpeg');
+        background-position: center;
+        height: 100vh;
+        background-size: cover;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          top: 20%;
+          right: 10%;
+          max-width: 600px;
+          color: white;
+        "
+      >
+        <h1
+          style="
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            font-family: 'Arial Black', 'Helvetica', sans-serif;
+            line-height: 1.2;
+          "
+        >
+          REVOLUTIONIZING SPACE <br />
+          TECHNOLOGY
+        </h1>
+        <p
+          style="
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+            font-family: 'Helvetica', 'Arial', sans-serif;
+          "
+        >
+          SpaceX's Starship spacecraft and Super Heavy rocket is a fully
+          reusable transportation system designed to carry both crew and cargo
+          to Earth orbit, the Moon, Mars, and beyond.
+        </p>
+        <a
+          href="#learn-more"
+          style="
+            display: inline-block;
+            padding: 15px 24px;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.6rem;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+            font-family: 'Helvetica', 'Arial', sans-serif;
+          "
+          onmouseover="this.style.backgroundColor='white'; this.style.color='black';"
+          onmouseout="this.style.backgroundColor='rgba(0,0,0,0.5)'; this.style.color='white';"
+        >
+          LEARN MORE <span style="margin-left: 8px">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="video-2">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        src="/project_videos/SpaceX.mp4"
+      ></video>
+
+      <div class="video-2-content">
+        <h1>WORLD'S LEADING LAUNCH SERVICE PROVIDER</h1>
+        <p>
+          SpaceX leads the world in launches with its reliable, reusable rockets
+          and is developing the fully and rapidly reusable rockets necessary to
+          transform humanity’s ability to access space into something as routine
+          as air travel.
+        </p>
+        <a
+          href="#reserve-your-ride"
+          style="
+            display: inline-block;
+            padding: 15px 24px;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.6rem;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+            font-family: 'Helvetica', 'Arial', sans-serif;
+          "
+          onmouseover="this.style.backgroundColor='white'; this.style.color='black';"
+          onmouseout="this.style.backgroundColor='rgba(0,0,0,0.5)'; this.style.color='white';"
+        >
+          RESERVE YOUR RIDE
+          <span style="margin-left: 8px">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div
+        style="
+          position: relative;
+          background-image: url('images/Advancing_Human_Spaceflight_Desktop_61c8ba1c67.jpeg');
+          background-position: center;
+          height: 100vh;
+          background-size: cover;
+        "
+      >
+        <div
+          style="
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            max-width: 600px;
+            color: white;
+          "
+        >
+          <h1
+            style="
+              font-size: 2.5rem;
+              font-weight: 900;
+              margin-bottom: 1.5rem;
+              letter-spacing: 1px;
+              text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+              font-family: 'Arial Black', 'Helvetica', sans-serif;
+              line-height: 1.2;
+            "
+          >
+            ADVANCING HUMAN <br />
+            SPACEFLIGHT
+          </h1>
+          <p
+            style="
+              font-size: 1rem;
+              line-height: 1.8;
+              margin-bottom: 2rem;
+              text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+              font-family: 'Helvetica', 'Arial', sans-serif;
+            "
+          >
+            Since returning human spaceflight capabilities to the United States
+            in 2020, SpaceX is helping build a new era where not just hundreds
+            of people, but thousands and ultimately millions will be able to
+            explore space.
+          </p>
+          <a
+            href="#join-a-mission"
+            style="
+              display: inline-block;
+              padding: 15px 24px;
+              border: 1px solid white;
+              border-radius: 5px;
+              background-color: rgba(0, 0, 0, 0.5);
+              color: white;
+              text-decoration: none;
+              font-weight: 400;
+              font-size: 0.6rem;
+              transition: all 0.3s;
+              backdrop-filter: blur(5px);
+              font-family: 'Helvetica', 'Arial', sans-serif;
+            "
+            onmouseover="this.style.backgroundColor='white'; this.style.color='black';"
+            onmouseout="this.style.backgroundColor='rgba(0,0,0,0.5)'; this.style.color='white';"
+          >
+            JOIN A MISSION <span style="margin-left: 8px">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-3">
+      <video autoplay loop muted src="/project_videos/SpaceX_2.mp4"></video>
+      <div class="video-3-content">
+        <h1>DELIVERING HIGH-SPEED INTERNET FROM SPACE</h1>
+        <p>
+          Starlink is the world’s most advanced satellite constellation in
+          low-Earth orbit, delivering reliable broadband internet capable of
+          supporting streaming, online gaming, video calls, and more.
+        </p>
+        <a
+          href="#order-now"
+          style="
+            display: inline-block;
+            padding: 15px 24px;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.6rem;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+            font-family: 'Helvetica', 'Arial', sans-serif;
+          "
+          onmouseover="this.style.backgroundColor='white'; this.style.color='black';"
+          onmouseout="this.style.backgroundColor='rgba(0,0,0,0.5)'; this.style.color='white';"
+        >
+          ORDER NOW <span style="margin-left: 8px">→</span>
+        </a>
+      </div>
+
+      <footer class="footer">
+        <a
+          href="https://x.com/SpaceX"
+          target="_blank"
+          aria-label="X"
+          class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/10 text-white text-sm hover:bg-white/20 transition"
+        >
+          <i class="fab fa-x-twitter"></i>
+        </a>
+
+        <div class="footer-links">
+          <a href="#">CAREERS</a>
+          <a href="#">UPDATES</a>
+          <a href="#">PRIVACY POLICY</a>
+          <a href="#">SUPPLIERS</a>
+        </div>
+        <p>&copy; 2025 SPACEX</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
